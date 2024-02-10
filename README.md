@@ -1,5 +1,5 @@
 # Optimization Formulation
-- please refer to [PDF](./doc/formulation.pdf) file.
+- please refer to the [PDF](./doc/formulation.pdf) file.
 
 # Testing Environment
 - Tested on MacBook Pro with M1 MAX
