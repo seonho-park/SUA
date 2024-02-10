@@ -1,5 +1,5 @@
 # Optimization Formulation
-- please refer to [PDF](https://github.com/seonho-park/SUA/doc/formulation.pdf) file.
+- please refer to [PDF](./doc/formulation.pdf) file.
 
 # Testing Environment
 - Tested on MacBook Pro with M1 MAX
