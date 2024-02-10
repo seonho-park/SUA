@@ -42,22 +42,6 @@ def build_model(product:dict[int,Any], dist:dict[int,Any], args:dict[str,Any]) -
             d_tilda[(i,s)] = d[i] * scenarios[i][s]
     
 
-    # print('check substitutability id', G)
-    # dsum = 0.
-    # for _, val in d.items():
-    #     dsum += val
-    # print('sum d', dsum)
-    # for s in range(args['ns']):
-    #     dsum = 0.
-    #     for i in d.keys():
-    #         dsum += d_tilda[(i,s)]
-    #     print('scenario',s,dsum)
-
-    # print('check scenarios')
-    # for i in range(6):
-    #     print(scenarios[i][:2])
-
-
     ######################### Optimization Modeling #########################
     model = pyo.ConcreteModel()
     
@@ -128,10 +112,4 @@ def solve_model(model:pyo.ConcreteModel, solver:str='highs') -> pyo.ConcreteMode
         opt = pyo.SolverFactory('glpk')
         
     result = opt.solve(model, tee=True)
-    # for i in model.P:
-    #     print(i, model.x[i].value)
-
-    # xval_sum = 0.
-    # for i in model.P:
-    #     xval_sum += model.x[i].value
     return model
